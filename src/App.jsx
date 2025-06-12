@@ -1,9 +1,9 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import Contact from './pages/Contact'
+import Navbar from './components/Navbar.jsx'
+import Footer from './components/Footer.jsx'
+import Home from './pages/Home.jsx'
+import Contact from './pages/Contact.jsx'
 
 export default function App() {
   const location = useLocation()
@@ -12,8 +12,8 @@ export default function App() {
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
-          <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+          <Route path="/" element={<PageWrapper><Home/></PageWrapper>}/>
+          <Route path="/contact" element={<PageWrapper><Contact/></PageWrapper>}/>
         </Routes>
       </AnimatePresence>
       <Footer />
